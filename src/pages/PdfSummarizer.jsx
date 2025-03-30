@@ -145,7 +145,6 @@ const PdfSummarizer = () => {
           {summary && <ContentDisplay summary={summary} />}
         </div>
       </div>
-      <BottomNavBar />
     </>
   );
 };

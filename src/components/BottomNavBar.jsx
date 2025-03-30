@@ -74,10 +74,20 @@ const BottomNavBar = () => {
       label: "Contact Us",
       onClick: () => window.open("https://udhayaboopathi.me/", "_blank"),
     },
+    {
+      // History button added here
+      icon: (
+        <div style={iconStyle}>
+          <TiHome size={24} />
+        </div>
+      ),
+      label: "History",
+      onClick: () => navigate("/summary"),
+    },
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 w-full p-2 z-50 flex justify-center text-blue-500 items-center  shadow-md  pb-2 flex-wrap">
+    <div className="fixed bottom-0 left-0 w-full p-2 z-50 flex justify-center text-blue-500 items-center shadow-md pb-2 flex-wrap">
       <Dock items={items} />
     </div>
   );

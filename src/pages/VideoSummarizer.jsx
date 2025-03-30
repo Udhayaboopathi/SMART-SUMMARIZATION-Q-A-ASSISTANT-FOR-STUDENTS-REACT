@@ -100,7 +100,6 @@ const VideoSummarizer = () => {
           {summary && <ContentDisplay summary={summary} />}
         </div>
       </div>
-      <BottomNavBar />
     </>
   );
 };

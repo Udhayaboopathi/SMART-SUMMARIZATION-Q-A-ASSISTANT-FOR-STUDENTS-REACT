@@ -148,7 +148,7 @@ const AudioAnalyzer = () => {
           {summary && <ContentDisplay summary={summary} />}
         </div>
       </div>
-      <BottomNavBar />
+
     </>
   );
 };

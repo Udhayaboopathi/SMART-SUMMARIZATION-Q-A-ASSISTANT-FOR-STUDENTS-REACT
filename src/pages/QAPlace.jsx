@@ -190,7 +190,6 @@ const AskQuestion = () => {
           )}
         </div>
       </div>
-      <BottomNavBar />
     </>
   );
 };

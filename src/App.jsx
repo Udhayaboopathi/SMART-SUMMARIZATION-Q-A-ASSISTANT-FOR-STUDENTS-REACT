@@ -7,13 +7,12 @@ import QAPlace from "./pages/QAPlace";
 import Carousel from "./components/Carousel";
 import ClickSpark from "./blocks/Animations/ClickSpark/ClickSpark";
 import SplashCursor from "./blocks/Animations/SplashCursor/SplashCursor";
+import SummaryViewer from "./pages/SummaryViewer";
+import BottomNavBar from "./components/BottomNavBar";
 import LiquidChrome from "./blocks/Backgrounds/LiquidChrome/LiquidChrome";
 import Hyperspeed from "./blocks/Backgrounds/Hyperspeed/Hyperspeed";
 import Iridescence from "./blocks/Backgrounds/Iridescence/Iridescence";
 import Threads from "./blocks/Backgrounds/Threads/Threads";
-
-// the component will fill the height/width of its parent container, edit the CSS to change this
-// the options below are the default values
 
 import "./App.css";
 
@@ -21,7 +20,7 @@ export default function App() {
   return (
     <Router>
       {/* Background Layer */}
-      {/* <SplashCursor /> */}
+      <SplashCursor />
 
       {/* Foreground Content */}
       <ClickSpark
@@ -40,11 +39,13 @@ export default function App() {
             <Route path="/audio" element={<AudioSummarizer />} />
             <Route path="/pdf" element={<PdfSummarizer />} />
             <Route path="/qa" element={<QAPlace />} />
+            <Route path="/summary" element={<SummaryViewer />} />
           </Routes>
+
+          <BottomNavBar />
         </div>
-        {/* <div className="fixed inset-0 -z-10 w-full h-full">
-          <Threads amplitude={1} distance={1.1} enableMouseInteraction={true} />
-        </div> */}
+
+        {/* Background Animation */}
       </ClickSpark>
     </Router>
   );
